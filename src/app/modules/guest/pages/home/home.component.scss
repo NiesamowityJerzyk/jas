@@ -1,0 +1,43 @@
+.container {
+  max-width: 1200px !important;
+  margin: 0 auto;
+}
+
+.toRight {
+  transition: 1s;
+  left: 10% !important;
+}
+
+.animation {
+  top: 30%;
+  animation-name: run;
+  animation-duration: 1.5s;
+  left: 10%;
+  position: absolute;
+}
+
+div.image:hover {
+  opacity: 0.85;
+}
+
+@keyframes run {
+  0% {
+    left: -20%;
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 10%;
+    pacity: 1;
+  }
+}
+
+svg {
+  fill: red;
+}
+
+.fillColor {
+  fill: red;
+}

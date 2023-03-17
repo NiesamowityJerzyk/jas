@@ -1,0 +1,108 @@
+<div
+  class="w-full h-screen relative bg-no-repeat bg-cover bg-center"
+  style="background-image: url('assets/images/car.jpg')"
+>
+  <div
+    class="animation text-[50px] font-semibold w-[1060px]"
+    style="text-shadow: 2px 2px 4px black"
+  >
+    <h1>Cześć!</h1>
+    <h3>
+      Witaj w najlepszej wypożyczalni <br />
+      samochodów na świecie!
+    </h3>
+  </div>
+</div>
+
+<div class="flex flex-col gap-16">
+  <section id="menu">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-center p-8 text-4xl">Oferta</h1>
+      <div class="grid grid-cols-4 gap-8">
+        <div
+          *ngFor="let person of [].constructor(12)"
+          class="image bg-no-repeat bg-cover bg-center h-[300px] cursor-pointer"
+          style="background-image: url('assets/images/audi.jpg')"
+        ></div>
+      </div>
+    </div>
+  </section>
+
+  <section
+    class="w-full h-[500px] text-center flex items-center justify-center bg-fixed bg-center bg-cover"
+    id="about"
+    style="background-image: url('assets/images/about.jpg')"
+  >
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-center p-8 text-4xl">O nas</h1>
+      <p class="text-[26px]">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore numquam
+        temporibus quisquam ipsum voluptatum ipsa, minima? Cupiditate temporibus
+        velit ab autem placeat! Mollitia cumque accusamus consequuntur voluptas
+        aliquam adipisci quis Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Assumenda quos sint maiores possimus saepe. Incidunt
+        ea debitis
+      </p>
+    </div>
+  </section>
+
+  <section class="footer" id="footer">
+    <div class="max-w-5xl mx-auto grid grid-cols-3 gap-5 text-lg py-[100px]">
+      <div>
+        <p class="mb-5 font-semibold">Dlaczego my?</p>
+        <p>
+          Jesteśmy doświadczoną firmą, która zajmuje się profesjonalną kosmetyką
+          samochodową i nie tylko. Każde auto jest dla nas bardzo cenne.
+        </p>
+      </div>
+      <div>
+        <p class="mb-5 font-semibold">Kontakt</p>
+        <div class="flex flex-col gap-1">
+          <p><i class="fa-solid fa-phone"></i><span>123456789</span></p>
+          <p>
+            <span>www.pansamochodzik.pl</span>
+          </p>
+          <p>
+            <span>Kielce, Ul. Samochodowa 2</span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <p class="mb-5 font-semibold">Menu</p>
+        <div class="flex flex-col gap-1">
+          <p class="cursor-pointer">Oferta</p>
+          <p class="cursor-pointer">Realizacje</p>
+          <p class="cursor-pointer">O nas</p>
+          <p class="cursor-pointer">Kontakt</p>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="py-[50px] flex items-center justify-center"
+      style="border-top: 1px solid rgba(255, 255, 255, 0.18)"
+    >
+      <div class="text-center">
+        <p class="text-[#2f5dba] mb-5 text-lg">
+          <span
+            >&copy; Detaling auto Województwo Świętokrzyskie. <br />
+            Zapraszamy do kontaktu!</span
+          >
+        </p>
+        <div class="flex items-center gap-5 justify-center">
+          <app-icon
+            class="cursor-pointer"
+            name="instagram"
+            [size]="30"
+          ></app-icon>
+
+          <app-icon
+            class="cursor-pointer"
+            name="facebook"
+            [size]="30"
+          ></app-icon>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -7,6 +7,13 @@ export const APP_ROUTES: Routes = [
     component: GuestComponent,
     children: [
       {
+        path: '',
+        loadComponent: () =>
+          import('./modules/guest/pages/home/home.component').then(
+            (x) => x.HomeComponent
+          ),
+      },
+      {
         path: 'oferta',
         loadComponent: () =>
           import('./modules/guest/pages/offer/offer.component').then(
