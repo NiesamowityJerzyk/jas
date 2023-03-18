@@ -7,13 +7,6 @@ export const APP_ROUTES: Routes = [
     component: GuestComponent,
     children: [
       {
-        path: '',
-        loadComponent: () =>
-          import('./modules/guest/pages/home/home.component').then(
-            (x) => x.HomeComponent
-          ),
-      },
-      {
         path: 'oferta',
         loadComponent: () =>
           import('./modules/guest/pages/offer/offer.component').then(
@@ -25,6 +18,20 @@ export const APP_ROUTES: Routes = [
         loadComponent: () =>
           import('./modules/guest/pages/about/about.component').then(
             (x) => x.AboutComponent
+          ),
+      },
+      {
+        path: 'kontakt',
+        loadComponent: () =>
+          import('./modules/guest/pages/contact/contact.component').then(
+            (x) => x.ContactComponent
+          ),
+      },
+      {
+        path: '',
+        loadComponent: () =>
+          import('./modules/guest/pages/home/home.component').then(
+            (x) => x.HomeComponent
           ),
       },
       { path: '**', redirectTo: '/' },

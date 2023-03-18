@@ -1,1 +1,58 @@
-<p>contact works!</p>
+<div
+  class="w-full h-[600px] relative bg-no-repeat bg-cover bg-center"
+  style="background-image: url('assets/images/kontakt.jpg')"
+>
+  <div
+    class="animation text-[70px] font-semibold w-[1060px]"
+    style="text-shadow: 2px 2px 4px black"
+  >
+    <h1>Kontakt</h1>
+  </div>
+</div>
+
+<div class="flex flex-col gap-16">
+  <section>
+    <div
+      id="map"
+      class="map mx-auto"
+      #mapContainer
+      style="height: 600px; width: 80%; border: 1px solid red"
+    ></div>
+  </section>
+  <section id="menu">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid grid-cols-3 gap-16">
+        <!-- <div>
+          <div
+            id="map"
+            #mapContainer
+            style="height: 400px; width: 100%; border: 1px solid red"
+          ></div>
+        </div> -->
+        <div>
+          <h2 class="mb-4">Zapraszamy</h2>
+          <p class="mb-2.5">
+            Odwiedź nasze studio i przekonaj się co potrafimy.
+          </p>
+          <p class="pb-2.5 mb-2 border-b border-[#009bcf]">Pon - Pt</p>
+          <p class="text-[32px] text-[#009bcf]">9:00 - 17:00</p>
+          <p class="pb-2.5 mb-2 border-b border-[#009bcf]">Sobota</p>
+          <p class="text-[32px] text-[#009bcf]">9:00 - 14:00</p>
+        </div>
+        <div>
+          <h2 class="mb-4">Detailing</h2>
+          <p class="mb-2.5">
+            ul. Witosa 65a, lok.6 <br />
+            25-561, Kielce <br />
+            Świętokrzyskie, PL
+          </p>
+          <div class="flex items-center gap-2">
+            <p>Śledź nas:</p>
+            <app-icon class="cursor-pointer" name="facebook"></app-icon>
+            <app-icon class="cursor-pointer" name="instagram"></app-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

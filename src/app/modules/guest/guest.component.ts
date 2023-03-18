@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { FooterComponent } from 'src/app/shared/components/footer/footer.component';
 import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.component';
 
 @Component({
@@ -9,6 +10,6 @@ import { NavbarComponent } from 'src/app/shared/components/navbar/navbar.compone
   templateUrl: './guest.component.html',
   styleUrls: ['./guest.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [CommonModule, RouterModule, NavbarComponent],
+  imports: [CommonModule, RouterModule, NavbarComponent, FooterComponent],
 })
 export class GuestComponent {}
