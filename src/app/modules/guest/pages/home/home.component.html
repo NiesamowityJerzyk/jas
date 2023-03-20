@@ -8,14 +8,14 @@
   >
     <h1>Cześć!</h1>
     <h3>
-      Witaj w najlepszej wypożyczalni <br />
-      samochodów na świecie!
+      Witaj w najlepszym salonie <br />
+      na świecie!
     </h3>
   </div>
 </div>
 
 <div class="flex flex-col gap-16">
-  <section id="menu">
+  <!-- <section id="menu">
     <div class="max-w-5xl mx-auto">
       <h1 class="text-center p-8 text-4xl">Oferta</h1>
       <div class="grid grid-cols-4 gap-8">
@@ -25,6 +25,38 @@
           style="background-image: url('assets/images/audi.jpg')"
         ></div>
       </div>
+    </div>
+  </section> -->
+
+  <section id="images">
+    <div class="max-w-5xl mx-auto">
+      <h1 class="text-center p-8 text-4xl">Oferta</h1>
+      <lightgallery
+        [settings]="settings"
+        [onInit]="onInit"
+        style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 32px"
+      >
+        <a
+          *ngFor="let item of items"
+          className="gallery-item"
+          [attr.href]="item.src"
+        >
+          <!-- <img
+          className="img-responsive"
+          style="height: 300px"
+          src="{{ item.thumb }}"
+        /> -->
+          <div class="flex flex-col gap-4">
+            <div
+              className="img-responsive"
+              style="height: 300px"
+              class="image bg-no-repeat bg-cover bg-center h-[300px] cursor-pointer"
+              [ngStyle]="{ 'background-image': 'url(' + item.thumb + ')' }"
+            ></div>
+            <p>Nazwa</p>
+          </div>
+        </a>
+      </lightgallery>
     </div>
   </section>
 

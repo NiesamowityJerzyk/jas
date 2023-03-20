@@ -3,7 +3,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 @import "~@angular/cdk/overlay-prebuilt.css";
-
+@import "lightgallery/css/lightgallery-bundle.css";
 html,
 body {
   height: 100%;
@@ -12,4 +12,9 @@ body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
   box-sizing: border-box;
+}
+
+body {
+  font-family: ubuntu, arial;
+  overflow-x: hidden;
 }
