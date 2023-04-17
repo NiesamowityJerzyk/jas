@@ -17,7 +17,14 @@
       class="map mx-auto"
       #mapContainer
       style="height: 600px; width: 80%"
-    ></div>
+    >
+      <!-- <div id="popup"></div> -->
+    </div>
+
+    <div id="popup" class="ol-popup" #container>
+      <a href="#" id="popup-closer" class="ol-popup-closer" #closer></a>
+      <div id="popup-content" #content></div>
+    </div>
   </section>
   <section id="menu">
     <div class="max-w-5xl mx-auto">
