@@ -17,6 +17,7 @@ import { LightGallery } from 'lightgallery/lightgallery';
 export class HomeComponent {
   private lightGallery!: LightGallery;
   private needRefresh = false;
+
   items = [
     {
       id: '1',
@@ -57,9 +58,9 @@ export class HomeComponent {
   ];
   constructor(private router: Router) {}
 
-  // ngOnInit() {
-  //   document.querySelector('.animation')?.classList.add('toRight');
-  // }
+  ngOnInit() {
+    // document.querySelector('.animation')?.classList.add('toRight');
+  }
   settings = {
     counter: false,
     plugins: [lgZoom],

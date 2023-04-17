@@ -1,5 +1,6 @@
 <div
-  class="flex justify-between py-4 px-5 bg-inherit text-white w-full fixed top-0 left-0 right-0 z-10"
+  class="flex justify-between py-4 px-[120px] text-white w-full fixed top-0 left-0 right-0 z-10"
+  [ngStyle]="{ 'background-color': showNavbar ? '#000000' : 'inherit' }"
 >
   <!-- <div
   class="flex justify-between py-4 px-5 bg-black text-white w-full fixed top-0 left-0 right-0 z-10 "
@@ -20,7 +21,8 @@
     style="background-image: url('assets/images/jstblack.png')"
   ></div> -->
 
-  <div class="flex items-center gap-5 font-medium">
+  <div class="flex items-center gap-5 font-bold text-[18px] text-red-400">
+    <p class="cursor-pointer" routerLink="/">Główna</p>
     <p class="cursor-pointer">Oferta</p>
     <p class="cursor-pointer">Realizacje</p>
     <p class="cursor-pointer">O nas</p>
