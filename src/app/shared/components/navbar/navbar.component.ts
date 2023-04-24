@@ -27,14 +27,13 @@ export class NavbarComponent {
     var prevScrollpos = window.pageYOffset;
     window.onscroll = () => {
       var currentScrollpos = window.pageYOffset;
-      console.log(currentScrollpos);
+
       if (currentScrollpos > 0) {
         this.showNavbar = true;
       } else {
         this.showNavbar = false;
       }
       this.cdr.detectChanges();
-      console.log(this.showNavbar);
 
       // if (prevScrollpos > currentScrollpos) {
       //   document.getElementsByClassName('nav')[0].style.top = '0';

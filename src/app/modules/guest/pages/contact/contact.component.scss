@@ -5,6 +5,11 @@
   left: 10%;
   position: absolute;
 }
+@media screen and (min-width: 1024px) {
+  .gridBigScreen {
+    grid-template-columns: 400px 1fr;
+  }
+}
 
 @keyframes run {
   0% {
@@ -30,6 +35,7 @@
   border-radius: 20%;
   display: none;
   padding: 0 10px;
+  font-size: 14px !important;
 }
 .pin {
   position: absolute;
@@ -40,12 +46,14 @@
   position: absolute;
   background-color: white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  color: black;
   padding: 15px;
   border-radius: 10px;
   border: 1px solid #cccccc;
   bottom: 12px;
   left: -50px;
   min-width: 280px;
+  font-size: 14px !important;
 }
 .ol-popup:after,
 .ol-popup:before {
