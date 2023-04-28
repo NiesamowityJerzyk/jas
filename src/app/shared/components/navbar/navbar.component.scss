@@ -1,9 +1,9 @@
 .navbar {
-  box-shadow: inset 0px -1px 0px #E2E2EA;
+  box-shadow: inset 0px -1px 0px #e2e2ea;
 }
 
 .active {
-  color: #F4882F;
+  color: #f4882f;
   font-weight: 600;
 }
 .active::after {
@@ -13,5 +13,24 @@
   height: 3px;
   top: 66px;
   left: 0;
-  background-color: #F4882F;
+  background-color: #f4882f;
+}
+
+.navSmall {
+  transition: 0.5s;
+}
+
+.navActive {
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+
+@media (min-width: 1280px) {
+  .navSmall {
+    display: none !important;
+  }
+}
+
+.activeTab {
+  border-bottom-color: white;
 }

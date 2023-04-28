@@ -1,0 +1,28 @@
+<div class="h-full flex flex-col bg-black">
+  <div class="mr-5 my-5 flex justify-end">
+    <app-icon
+      (click)="hideNav(nav)"
+      class="cursor-pointer"
+      name="close"
+      [size]="40"
+    ></app-icon>
+  </div>
+
+  <div class="grow flex flex-col justify-between">
+    <div>
+      <div
+        *ngFor="let el of links; let i = index"
+        [routerLink]="el.link"
+        (click)="hideNav(nav)"
+        routerLinkActive="active"
+        class="flex items-center justify-between text-dark pl-[30px] py-[8px] 2xl:py-[15px] pr-[10px] font-bold cursor-pointer mb-[10px]"
+      >
+        <p class="text-[20px]">{{ el.name }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--
+[ngStyle]="{'background-color': el.active? 'rgba(7, 190, 206, 0.1)' : '#F8FAFD' }"
+[ngClass]="{'text-main': el.active }" -->

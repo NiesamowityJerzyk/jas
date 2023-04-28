@@ -1,1 +1,42 @@
-<p>offers</p>
+<div
+  class="w-full h-[600px] mb-20 relative bg-no-repeat bg-cover bg-center"
+  style="background-image: url('assets/images/kontakt.jpg')"
+>
+  <div
+    class="animation text-[70px] font-semibold w-[1060px]"
+    style="text-shadow: 2px 2px 4px black"
+  >
+    <h1>Oferta</h1>
+  </div>
+</div>
+
+<div class="max-w-5xl mx-auto">
+  <h1 class="text-center mb-10 text-4xl font-bold">Wejdz na nasz instagram</h1>
+  <div class="mb-10 flex items-center gap-5">
+    <app-icon
+      class="cursor-pointer"
+      name="instagram-white"
+      [size]="40"
+    ></app-icon>
+    <p>JST AutoKosmetyka</p>
+  </div>
+  <div
+    style="display: grid; gap: 32px"
+    class="gird-cols-1 md:grid-cols-2 lg:grid-cols-3"
+  >
+    <a
+      *ngFor="let item of items"
+      className="gallery-item"
+      (click)="openInNewTab('https://www.instagram.com/p/CqEK_r6Noj-/')"
+    >
+      <div class="flex flex-col gap-8">
+        <div
+          className="img-responsive"
+          style="height: 300px"
+          class="image bg-no-repeat bg-cover bg-center h-[300px] cursor-pointer hover:opacity-70 duration-300"
+          [ngStyle]="{ 'background-image': 'url(' + item.thumb + ')' }"
+        ></div>
+      </div>
+    </a>
+  </div>
+</div>

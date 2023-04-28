@@ -5,20 +5,22 @@
   ></div>
 
   <div
-    class="mt-[70px] ml-[220px] flex flex-col gap-[20px] text-[22px] max-w-[550px]"
+    class="mx-auto px-5 md:mt-[70px] md:ml-[220px] flex flex-col gap-[20px] text-[22px] max-w-[550px]"
   >
-    <p class="font-semibold text-[22px]">JAŚ DETAILING - AUTO KOSMETYKA</p>
-    <p class="font-semibold text-[30px]">
+    <p class="font-semibold text-lg md:text-[22px]">
+      JAŚ DETAILING - AUTO KOSMETYKA
+    </p>
+    <p class="font-semibold text-[26px] md:text-[30px]">
       ZADBAMY O KAŻDY SZCZEGÓŁ TWOJEGO AUTA
     </p>
     <div class="flex gap-[50px] mt-5 items-center">
       <button
-        class="px-[10px] py-[15px] border-2 font-semibold border-solid border-red-400 text-red-400 w-full"
+        class="px-[10px] py-[15px] hover:bg-red-400 hover:text-white duration-300 border-2 font-semibold border-solid border-red-400 text-red-400 w-full"
       >
         Skontakuj się
       </button>
       <button
-        class="px-[10px] py-[15px] border-2 font-semibold border-solid border-[#FFFFFF] w-full"
+        class="px-[10px] py-[15px] hover:bg-white hover:text-red-400 duration-300 border-2 font-semibold border-solid border-[#FFFFFF] w-full"
       >
         Skontakuj się
       </button>
@@ -33,7 +35,8 @@
       <lightgallery
         [settings]="settings"
         [onInit]="onInit"
-        style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 32px"
+        style="display: grid; gap: 32px"
+        class="gird-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
       >
         <a
           *ngFor="let item of items"
@@ -69,6 +72,78 @@
         adipisicing elit. Assumenda quos sint maiores possimus saepe. Incidunt
         ea debitis
       </p>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="max-w-5xl mx-auto px-5">
+      <h1 class="text-center p-8 text-4xl">Usługi</h1>
+      <div class="flex flex-col gap-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <div class="text-2xl font-bold mb-10">
+              Kompleksowe Pranie Wnętrz
+            </div>
+            <p>
+              SKONTAKTUJ SIĘ PO WYCENĘ Wnętrze auta to miejsce w którym
+              przebywamy na codzień. Każdy dokładnie zna uczucie kiedy w końcu
+              znajdziemy chwilę i ogarniemy wnętrze swojego auta, wtedy czujemy
+              się jakbyśmy zasiedli za stery samochodu o conajmniej 2 klasy
+              wyżej.
+            </p>
+          </div>
+          <div class="flex-1 w-full flex items-center justify-center">
+            <div
+              class="image bg-no-repeat bg-cover w-full bg-center h-[300px] cursor-pointer hover:opacity-70 duration-300"
+              [ngStyle]="{
+                'background-image': 'url(' + 'assets/images/audi.jpg' + ')'
+              }"
+            ></div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div class="flex-1 flex items-center justify-center">
+            <div
+              class="image bg-no-repeat bg-cover w-full bg-center h-[300px] cursor-pointer hover:opacity-70 duration-300"
+              [ngStyle]="{
+                'background-image': 'url(' + 'assets/images/audi.jpg' + ')'
+              }"
+            ></div>
+          </div>
+          <div>
+            <div class="text-2xl font-bold mb-10">Ozonowanie</div>
+            <p>
+              SKONTAKTUJ SIĘ PO WYCENĘ Wnętrze auta to miejsce w którym
+              przebywamy na codzień. Każdy dokładnie zna uczucie kiedy w końcu
+              znajdziemy chwilę i ogarniemy wnętrze swojego auta, wtedy czujemy
+              się jakbyśmy zasiedli za stery samochodu o conajmniej 2 klasy
+              wyżej.
+            </p>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+          <div>
+            <div class="text-2xl font-bold mb-10">Powłoki Ochronne</div>
+            <p>
+              SKONTAKTUJ SIĘ PO WYCENĘ Wnętrze auta to miejsce w którym
+              przebywamy na codzień. Każdy dokładnie zna uczucie kiedy w końcu
+              znajdziemy chwilę i ogarniemy wnętrze swojego auta, wtedy czujemy
+              się jakbyśmy zasiedli za stery samochodu o conajmniej 2 klasy
+              wyżej.
+            </p>
+          </div>
+          <div class="flex-1 flex items-center justify-center">
+            <div
+              class="image bg-no-repeat bg-cover w-full bg-center h-[300px] cursor-pointer hover:opacity-70 duration-300"
+              [ngStyle]="{
+                'background-image': 'url(' + 'assets/images/audi.jpg' + ')'
+              }"
+            ></div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 </div>

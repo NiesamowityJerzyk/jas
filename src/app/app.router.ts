@@ -28,13 +28,13 @@ export const APP_ROUTES: Routes = [
           ),
       },
       {
-        path: '',
+        path: 'home',
         loadComponent: () =>
           import('./modules/guest/pages/home/home.component').then(
             (x) => x.HomeComponent
           ),
       },
-      { path: '**', redirectTo: '/' },
+      { path: '**', redirectTo: '/home' },
     ],
   },
 

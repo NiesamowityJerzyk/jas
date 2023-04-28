@@ -2,3 +2,29 @@
   max-width: 1200px !important;
   margin: 0 auto;
 }
+.animation {
+  top: 50%;
+  animation-name: run;
+  animation-duration: 1.5s;
+  left: 10%;
+  position: absolute;
+}
+@media screen and (min-width: 1024px) {
+  .gridBigScreen {
+    grid-template-columns: 400px 1fr;
+  }
+}
+
+@keyframes run {
+  0% {
+    left: -20%;
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    left: 10%;
+    opacity: 1;
+  }
+}

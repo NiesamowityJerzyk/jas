@@ -1,5 +1,5 @@
 <div
-  class="flex justify-between py-4 px-[120px] text-white w-full fixed top-0 left-0 right-0 z-10"
+  class="fixed flex justify-between py-4 px-[120px] text-white w-full fixed top-0 left-0 right-0 z-10"
   [ngStyle]="{ 'background-color': showNavbar ? '#000000' : 'inherit' }"
 >
   <!-- <div
@@ -21,11 +21,46 @@
     style="background-image: url('assets/images/jstblack.png')"
   ></div> -->
 
-  <div class="flex items-center gap-5 font-bold text-[18px] text-red-400">
-    <p class="cursor-pointer" routerLink="/">Główna</p>
-    <p class="cursor-pointer">Oferta</p>
-    <p class="cursor-pointer">Realizacje</p>
-    <p class="cursor-pointer">O nas</p>
-    <p class="cursor-pointer" routerLink="/kontakt">Kontakt</p>
+  <div
+    class="flex items-center gap-5 font-bold text-[18px] text-red-400 hidden lg:flex"
+  >
+    <p
+      class="cursor-pointer pb-2 border-b-2 border-black"
+      routerLink="/home"
+      routerLinkActive="activeTab"
+    >
+      Główna
+    </p>
+    <p
+      class="cursor-pointer pb-2 border-b-2 border-black"
+      routerLink="/oferta"
+      routerLinkActive="activeTab"
+    >
+      Oferta
+    </p>
+    <p class="cursor-pointer pb-2 border-b-2 border-black">Realizacje</p>
+    <p class="cursor-pointer pb-2 border-b-2 border-black">O nas</p>
+    <p
+      class="cursor-pointer pb-2 border-b-2 border-black"
+      routerLink="/kontakt"
+      routerLinkActive="activeTab"
+    >
+      Kontakt
+    </p>
+  </div>
+  <div class="absolute right-5 top-1/2 -translate-y-1/2 lg:hidden">
+    <app-icon
+      (click)="showNav(nav)"
+      class="cursor-pointer"
+      name="hamburger"
+      [size]="30"
+    ></app-icon>
+  </div>
+
+  <div
+    #nav
+    class="fixed top-0 bottom-0 right-0 left-0 navSmall w-full invisible opacity-0 z-10 lg:hidden bg-[#F8FAFD]"
+  >
+    <app-sidebar-mobile [nav]="nav" [links]="links"></app-sidebar-mobile>
   </div>
 </div>
